@@ -1,0 +1,181 @@
+/* Base Container - Keeps your beautiful background */
+.iwb-register-page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2b1b42 0%, #e86b92 100%);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Background pattern animation */
+.iwb-register-page-container::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, transparent 20%, rgba(43, 27, 66, 0.3) 20%, rgba(43, 27, 66, 0.3) 80%, transparent 80%, transparent),
+                radial-gradient(circle, transparent 20%, rgba(43, 27, 66, 0.3) 20%, rgba(43, 27, 66, 0.3) 80%, transparent 80%, transparent) 50px 50px;
+    background-size: 100px 100px;
+    animation: backgroundMove 15s linear infinite;
+    opacity: 0.1;
+}
+
+/* Main content container - now with solid white form area */
+.iwb-register-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(232, 107, 146, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image section */
+.iwb-register-image {
+    flex: 1;
+    background: linear-gradient(rgba(43, 27, 66, 0.7), rgba(232, 107, 146, 0.5)), 
+                url('https://picsum.photos/800/1000') center/cover no-repeat;
+    min-height: 600px;
+}
+
+/* Form container - now with solid white background */
+.iwb-register-form-container {
+    flex: 1;
+    padding: 3rem;
+    background: white;
+}
+
+/* Form box */
+.iwb-register-form-box {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Title - changed to dark for contrast */
+.iwb-register-title {
+    color: #2b1b42;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+    animation: slideDown 0.6s ease-out;
+}
+
+/* Input fields - now with solid backgrounds */
+.iwb-register-input,
+.iwb-register-select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    color: #2b1b42;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.iwb-register-input::placeholder {
+    color: #94a3b8;
+}
+
+.iwb-register-input:focus,
+.iwb-register-select:focus {
+    outline: none;
+    border-color: #e86b92;
+    box-shadow: 0 0 0 3px rgba(232, 107, 146, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Select dropdown specific styles */
+.iwb-register-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232b1b42' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+/* Button styles */
+.iwb-register-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #9370DB, #e86b92);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.iwb-register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 107, 146, 0.4);
+}
+
+/* Footer links */
+.iwb-register-footer {
+    text-align: center;
+    color: #64748b;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.iwb-register-link,
+.iwb-register-link-home {
+    color: #e86b92;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.iwb-register-link:hover,
+.iwb-register-link-home:hover {
+    color: #9370DB;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes backgroundMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .iwb-register-image {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .iwb-register-form-container {
+        padding: 1.5rem;
+    }
+    .iwb-register-title {
+        font-size: 2rem;
+    }
+}
+
+/*=================== */

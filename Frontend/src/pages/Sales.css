@@ -1,0 +1,189 @@
+/* Unique Sales Dashboard Styles */
+.sales-dashboard-unique {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation Buttons */
+.sales-nav-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sales-nav-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.sales-products-btn {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+.sales-queries-btn {
+  background-color: #5a8f6b;
+  color: white;
+}
+
+.sales-logout-btn {
+  background-color: #d35d6e;
+  color: white;
+}
+
+.sales-nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.sales-main-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.sales-records-title, .sales-chart-title {
+  color: #34495e;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+/* Form Styles */
+.sales-form-unique {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.sales-product-select, .sales-quantity-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 200px;
+  transition: border 0.3s;
+}
+
+.sales-product-select:focus, .sales-quantity-input:focus {
+  border-color: #4a6fa5;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+}
+
+.sales-submit-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sales-submit-btn:hover:not(:disabled) {
+  background-color: #3a5a80;
+  transform: translateY(-1px);
+}
+
+.sales-submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.sales-stock-warning {
+  color: #e74c3c !important;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+  width: 100%;
+  animation: fadeIn 0.3s;
+}
+
+/* Table Styles */
+.sales-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.sales-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.sales-data-table th {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+}
+
+.sales-data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sales-data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sales-data-table tr:hover {
+  background-color: #f5f9ff;
+}
+
+/* Chart Styles */
+.sales-chart-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sales-form-unique {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .sales-product-select, .sales-quantity-input, .sales-submit-btn {
+      width: 100%;
+      min-width: auto;
+  }
+  
+  .sales-nav-buttons-container {
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+}

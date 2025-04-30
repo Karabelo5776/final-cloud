@@ -1,0 +1,96 @@
+/* General Styles */
+.income-statement-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for absolute positioning of logout button */
+}
+
+/* Logout Button (Smaller Version) */
+.logout-btn {
+    position: absolute;
+    top: 0.5rem; /* Reduced vertical spacing */
+    right: 0.5rem; /* Reduced horizontal spacing */
+    padding: 0.5rem 1rem; /* Reduced padding for a smaller button */
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 0.25rem; /* Slightly smaller radius */
+    cursor: pointer;
+    font-size: 0.875rem; /* Reduced font size */
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c53030; /* Hover effect remains the same */
+}
+
+/* Title */
+#income-statement-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Financial Summary Table */
+#financial-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.table-header {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    color: #6b7280;
+    padding: 0.75rem;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.table-row:hover {
+    background-color: #f3f4f6;
+}
+
+.table-cell {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* Chart Section */
+#chart-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#chart-container {
+    margin: 0 auto;
+}
+
+.chart-axis {
+    stroke: #ccc;
+}
+
+.chart-tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.chart-bar {
+    fill: #82ca9d;
+    stroke: #52b788;
+}
